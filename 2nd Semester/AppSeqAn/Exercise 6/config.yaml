@@ -1,0 +1,7 @@
+samples:
+  "sample.tsv"
+index:
+  "reference/reference.fa"
+bowtie_para:
+  N = 1,
+  ma = 2

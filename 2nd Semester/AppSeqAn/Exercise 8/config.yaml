@@ -1,0 +1,13 @@
+samples:
+  "sample.tsv"
+index:
+  "reference/NC_045512.2.fasta" #reference fasta file
+kraken:
+  "true" #set true if you want to run kraken2
+database:
+  "minikraken2" #kraken database
+threads:
+  4
+bowtie_para:
+  N = 1,
+  ma = 2
