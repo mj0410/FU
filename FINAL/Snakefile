@@ -1,0 +1,41 @@
+import os
+from pathlib import Path
+import pandas as pd
+import numpy as np
+
+configfile : "config.yaml" #set index(reference fasta file) and data(path to paired end reads)
+
+samples = pd.read_csv(config["samples"], index_col = "sample", sep='\t')
+path = []
+
+for i in range(len(samples)):
+    head, tail = os.path.split(samples['fq1'][0])
+    path.append(head + "/")
+
+samples['path'] = path
+
+include: "rules/bowtie.smk"
+include: "rules/samtools.smk"
+include: "rules/qc.smk"
+include: "rules/assembly.smk"
+include: "rules/phylogeny.smk"
+include: "rules/sequence_variability.smk"
+include: "rules/kraken.smk"
+include: "rules/annotation.smk"
+include: "rules/mlst.smk"
+
+# if you need quality control report, then add below as an input of rule all
+# "qc_report/multiqc_report.html"
+
+if config['mlst'] == "yes":
+    rule all:
+        input:
+            "tree/phylogenetic_tree.png",
+            expand("assembly/{sample}.fasta", sample=list(samples.index)),
+            "mlst/mlst.tsv"
+
+else:
+    rule all:
+        input:
+            "tree/phylogenetic_tree.png",
+            expand("assembly/{sample}.fasta", sample=list(samples.index))

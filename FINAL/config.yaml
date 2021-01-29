@@ -1,0 +1,16 @@
+samples:
+  "sample.tsv"
+index:
+  "reference/ecoli_reference.fasta" #reference fasta file
+kraken:
+  "false" #set true if you want to run kraken2
+database:
+  "minikraken2" #kraken database
+assembly: #denovo : run denovo assembly / other string : run reference based assembly
+  "denovo"
+threads:
+  4
+mlst:
+  "yes" #set yes if you want to run mlst
+species:
+  "ecoli"
