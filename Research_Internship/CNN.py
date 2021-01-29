@@ -52,6 +52,7 @@ unbind = [s.replace('\n', '') for s in unbind]
 
 df = pd.DataFrame({'seq':[], 'label':[]})
 
+# manual encoding from https://github.com/onceupon/deep_learning_DNA/blob/master/predict_seq.py
 for i in range(len(bind)):
   mat = onehot_encoder(bind[i])
   df = df.append({'seq':mat.tolist(), 'label':1}, ignore_index=True)
