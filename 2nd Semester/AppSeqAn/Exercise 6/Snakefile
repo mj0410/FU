@@ -1,0 +1,20 @@
+import os
+from pathlib import Path
+import pandas as pd
+
+configfile : "config.yaml"
+
+samples = pd.read_csv(config["samples"], index_col = "sample", sep='\t')
+
+include: "rules/bowtie.smk"
+include: "rules/samtools.smk"
+include: "rules/qc.smk"
+
+rule all:
+    input:
+        expand("reports/{sample}_1_fastqc.html", sample=list(samples.index)),
+        expand("reports/{sample}_2_fastqc.html", sample=list(samples.index)),
+        expand("trimmed_reads/unpaired_{sample}_2.fastq", sample=list(samples.index)),
+        expand("trimmed_reports/{sample}_fastqc.html", sample=list(samples.index+'_1')),
+        expand("trimmed_reports/{sample}_fastqc.html", sample=list(samples.index+'_2')),
+        "reports/multiqc_report.html"

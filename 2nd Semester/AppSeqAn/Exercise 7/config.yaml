@@ -1,0 +1,9 @@
+samples:
+  "sample.csv"
+index:
+  "reference/NC_045512.2.fasta" #reference fasta file
+data:
+  "data/" #path to fastq files
+bowtie_para:
+  N = 1,
+  ma = 2

@@ -1,0 +1,14 @@
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  #- etetoolkit
+
+dependencies:
+  - python
+  #- ete3
+  #- ete_toolchain
+  - pip
+  - pip:
+      - biopython
+      - matplotlib
