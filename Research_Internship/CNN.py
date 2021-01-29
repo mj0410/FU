@@ -31,21 +31,21 @@ data = tarfile.open(filename, "r:gz")
 data.extractall()
 data.close()
 
+# binding
 b = open('ghl_gold.fa','r')
 bind = b.readlines()
 b.close()
 
+#unbinding
 u = open('ghl_gold_random.fa','r')
 unbind = u.readlines()
 u.close()
 
 bind = [v for v in bind if '>' not in v]
 bind = [s.replace('\n', '') for s in bind]
-bind = bind[:100000]
 
 unbind = [v for v in unbind if '>' not in v]
 unbind = [s.replace('\n', '') for s in unbind]
-unbind = unbind[:100000]
 
 
 ##### OneHot Encoding #####
