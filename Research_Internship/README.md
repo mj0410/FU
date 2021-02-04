@@ -1,8 +1,9 @@
 # Convolutional Neural Network model for transcription factor binding prediction
 
 ### TO DO
-- One Hot Encoding takes too long... Maybe other ways to do..? (already tried : sklearn) <br/>
-- How to set appropriate number of nodes, filters and layers?
+- One Hot Encoding takes too long... Maybe other ways to do..? (already tried : sklearn)
+- Input format (pandas series, not numpy array)
+- ~~How to set appropriate number of nodes, filters and layers?~~ **Hyper parameter tunning, able to do by GridSearch in python**
 
 ### Background
 
@@ -39,4 +40,5 @@ Why One Hot Encoding is necessary?
 
 ###### Helpful links
 [Keras](https://keras.io/) <br/>
-[Tensorflow](https://www.tensorflow.org/api_docs/python/tf/keras/layers)
+[Tensorflow](https://www.tensorflow.org/api_docs/python/tf/keras/layers) <br/>
+[Grid search for deep learning model](https://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
