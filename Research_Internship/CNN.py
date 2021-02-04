@@ -3,13 +3,22 @@ import pandas as pd
 import numpy as np
 import re
 
-from sklearn.utils import shuffle
-from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.metrics import precision_recall_curve
+from sklearn.metrics import roc_curve
+from sklearn.metrics import roc_auc_score
 
 from keras.utils import to_categorical
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv1D, MaxPooling1D
+
+from sklearn.model_selection import GridSearchCV
+from keras.wrappers.scikit_learn import KerasClassifier
+
+from matplotlib import pyplot as plt
+
 
 # manual encoding from https://github.com/onceupon/deep_learning_DNA/blob/master/predict_seq.py
 def onehot_encoder(seq):
@@ -78,7 +87,7 @@ x_test = np.asarray(x_test.to_list())
 data1 = np.array(y_train.values.tolist())
 y_train = to_categorical(data1)
 data2 = np.array(y_test.values.tolist())
-y_test = to_categorical(data2)
+y_t = to_categorical(data2)
 
 x_train = x_train.astype('float32')
 
@@ -94,10 +103,42 @@ model.add(Dropout(0.2))
 model.add(Dense(2, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(x_train, y_train, epochs=5, validation_data= None)
+history = model.fit(x_train, y_train, epochs=10, validation_split = 0.1)
 
 
 ##### Evaluation #####
 
-score = model.evaluate(x_test, y_test, verbose=1)
-print("score = " + str(score))
+# loss plot
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['train', 'val'], loc='upper right')
+plt.show()
+
+# precision-recall curve
+probs = model.predict(x_test, verbose=0)[:,1]
+precision, recall, thresholds = precision_recall_curve(y_test.values, probs)
+
+plt.plot(recall, precision)
+
+plt.title('Precision-Recall Curve')
+
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.show()
+
+# ROC curve
+auc = roc_auc_score(y_test.values, probs)
+fpr, tpr, _ = roc_curve(y_test.values, probs)
+
+plt.plot(fpr, tpr)
+plt.title('ROC Curve (AUC = ' + str(round(auc,2)) + ')')
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.show()
+
+# Accuracy
+score = model.evaluate(x_test, y_t, verbose=1)
+print("Accuracy = " + str(round(score[1],2)))
