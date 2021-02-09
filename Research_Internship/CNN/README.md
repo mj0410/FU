@@ -1,4 +1,4 @@
-# Convolutional Neural Network model for transcription factor binding prediction
+# Convolutional Neural Network
 
 ### TO DO
 - ~~One Hot Encoding takes too long... Maybe other ways to do..? (already tried : sklearn)~~ **The long running time was because of dataframe append function not encoding**
