@@ -1,5 +1,42 @@
 ### Neural Network
-### ANN / CNN / RNN
+
+- inspired by the neural architecture of a human brain <br/>
+- The output is provided by 'neurons' by applying functions (activation function) on the inputs. <br/>
+````diff
+Activation functions <br/>
+# sigmoid
+- captures non-linearity in the data
+- problem of vanishing gradients. 
+# Tanh
+- rescaled version of the sigmoid
+- problem of vanishing gradients
+# ReLU
+- The Rectified Linear Unit
+- The most commonly used activation function
+- f(x)=max (0, x)
+````
+
+### ANN / CNN / RNN 
+##### ANN (Artificial Neural Network) 
+- input layer / hidden layers / output layer 
+- Feed-Forward Neural network 
+- each layer learns certain weights
+##### CNN (Convolutional Neural Network)
+- convolution / pooling / fully-connected layers
+- captures spatial features
+- image / video data
+##### RNN (Recurrent Neural Network)
+- recurrent connection on the hidden layers
+- captures context
+- time-series / text / audio data
+
+### Transcription Factor
+- Transcription factors bind to specific DNA sequences, open promoter and enhancer regions, which play important role in regulating gene expression.
+- PWM is one of the most commonly used method to predict transcription factor binding site.
+
 ### position weight matrix (PWM)
-### Transcription Factor Binding prediction
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LexA_gram_positive_bacteria_sequence_logo.png/440px-LexA_gram_positive_bacteria_sequence_logo.png" width=50% height=50%> <br/>
+- representation of motifs in biological sequences
+- Each letter (nucleotide) has score, which represents how well the sequence matches a motif (transcription factor binding site in our case).
+
 ### PWM vs NN
