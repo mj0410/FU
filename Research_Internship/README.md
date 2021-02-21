@@ -38,5 +38,14 @@ Activation functions <br/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LexA_gram_positive_bacteria_sequence_logo.png/440px-LexA_gram_positive_bacteria_sequence_logo.png" width=50% height=50%> <br/>
 - representation of motifs in biological sequences
 - Each letter (nucleotide) has score, which represents how well the sequence matches a motif (transcription factor binding site in our case).
+```diff
+# Advantage
++ simple model, easy to construct
++ can intuitively express the binding affinity with fewer parameters
 
+# Disadvantage
+- sensitive to quality and size of set of TFBS sequences
+- high false positive rate (The model assumes independence between base positions of sequence)
+- do not include composition or structure of TFs
+```
 ### PWM vs NN
