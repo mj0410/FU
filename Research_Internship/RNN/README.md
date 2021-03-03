@@ -3,7 +3,6 @@
 ### TO DO
 - Grid search
 - Embedding?
-- Reverse complement
 
 ### Background
 ##### RNN
