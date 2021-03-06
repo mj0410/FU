@@ -4,6 +4,7 @@
 - ~~One Hot Encoding takes too long... Maybe other ways to do..? (already tried : sklearn)~~ **The long running time was because of dataframe append function not encoding**
 - ~~Input format (pandas series, not numpy array)~~
 - ~~How to set appropriate number of nodes, filters and layers?~~ **Hyper parameter tunning, able to do by GridSearch in python (cannot actually run due to running time)**
+- ~~Change kernel size to 7 (fit to ghl1 seq)~~
 
 ### Background
 
