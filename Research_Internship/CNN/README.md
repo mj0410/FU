@@ -19,24 +19,39 @@ Why One Hot Encoding is necessary?
 #### 1D CNN
 <img src="https://missinglink.ai/wp-content/uploads/2019/03/1D-convolutional-example_2x.png" width=30% height=30%>
 
-> *Conv1D(filter, kernal_size, strides, activation)*
+> **Convolution layer**
+> captures the pattern of given sequence
+
+`Conv1D(filter, kernal_size, strides, activation)`
 - filter : number of output filters used in operation
 - kernal_size : size of window
 - strides : shift size of window
 - activation : type of activation function (relu, sigmoid, softmax...)
 
-> *MaxPooling1D(pool_size, strides)*
+> **Pooling layer**
+> reduces spatial size of input for less computation and preventing overfitting
+
+````MaxPooling1D(pool_size, strides)````
 - pool_size : size of window
 - strides : shift size of window
 
-> *Flatten()*
+> **Flattening**
+> transforms pooled feature map to single vector
+
+`Flatten()`
 - connection between Conv and Dense
 
-> *Dense(units, activation)*
+> **Fully connected layer**
+> takes the result from previous layer and predict label of inputs
+
+`Dense(units, activation)`
 - units : dimensionality of the output
 - activation : type of activation function (relu, sigmoid, softmax...)
 
-> *Dropout(rate)*
+> **Dropout**
+> helps to preventing overfitting
+
+`Dropout(rate)`
 - rate : fraction of the input units to drop
 
 ###### Helpful links
