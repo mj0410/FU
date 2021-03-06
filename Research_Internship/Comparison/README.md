@@ -1,9 +1,7 @@
 # Model Comparison
 
-### CNN
-### RNN
-##### LSTM
-##### Bidirectional LSTM
-### CNN-RNN
-##### CNN-LSTM
-##### CNN-Bidirectional LSTM
+### Accuracy
+
+### Precision-recall curve
+
+### ROC curve and AUC
