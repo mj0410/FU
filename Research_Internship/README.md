@@ -48,4 +48,5 @@ Activation functions <br/>
 - high false positive rate (The model assumes independence between base positions of sequence)
 - do not include composition or structure of TFs
 ```
-### PWM vs NN
+### GRHL1 TF
+<img src="http://jaspar.genereg.net/static/logos/svg/MA0647.1.svg" width=50% height=50%> <br/>
