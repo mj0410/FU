@@ -32,3 +32,20 @@ As learning continues, the effect of the information received earlier gradually 
 <img src="https://i.imgur.com/fLc4u4w.png" width=50% height=50%> <br/>
 
 - put two independent RNNs together; one reads forward and another reads backward <br/>
+
+> **Embedding layer**
+> learn embedding of each word via input
+> inputs have to be represented by unique integer (conversion is done by keras.Tokenizer)
+> words will be 7-mers in our data
+
+`Embedding(input_dim, output_dim, input_length)`
+- input_dim : number of words in data
+- output_dim : size of vector words will be embedded
+- input_length : number of words in one input (14 in our data since we have 20bp length sequences)
+
+> **LSTM layer**
+
+`LSTM(units, actiavtion, return_sequences)`
+- units : dimentionality of output
+- activation : activation function
+- return_sequences : default is 'False'. Set 'True' if the layer is followed by another LSTM layer.
