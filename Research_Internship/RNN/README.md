@@ -5,6 +5,11 @@
 - Embedding?
 
 ### Background
+
+##### Word Embedding
+- the method represents the 'word' as a vector
+- can represent semantic relationship between the words
+
 ##### RNN
 <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2020/02/assets_-LvBP1svpACTB1R1x_U4_-LwEQnQw8wHRB6_2zYtG_-LwEZT8zd07mLDuaQZwy_image-1.png" width=50% height=50%> <br/>
 - network contains at least one feed-back connection <br/>
