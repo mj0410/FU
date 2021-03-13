@@ -7,7 +7,7 @@
 ### Background
 
 ##### Word Embedding
-- the method represents the 'word' as a vector
+- the method represents the 'word' as a vector <br/>
 - can represent semantic relationship between the words
 
 ##### RNN
@@ -34,9 +34,9 @@ As learning continues, the effect of the information received earlier gradually 
 - put two independent RNNs together; one reads forward and another reads backward <br/>
 
 > **Embedding layer**
-> learn embedding of each word via input
-> inputs have to be represented by unique integer (conversion is done by keras.Tokenizer)
-> words will be 7-mers in our data
+> learns embedding of each word via input <br/>
+> Inputs have to be represented by unique integer (conversion is done by keras.Tokenizer) <br/>
+> Words will be 7-mers in our data <br/>
 
 `Embedding(input_dim, output_dim, input_length)`
 - input_dim : number of words in data
