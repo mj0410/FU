@@ -1,7 +1,7 @@
 # Model Comparison
 
 ### Accuracy
-<img src="https://user-images.githubusercontent.com/66175878/111066394-14f2ab80-84bf-11eb-8d71-3f2e95dd23eb.png" width=10% height=10%> <br/>
+<img src="https://user-images.githubusercontent.com/66175878/111066394-14f2ab80-84bf-11eb-8d71-3f2e95dd23eb.png" width=15% height=15%> <br/>
 
 ### Loss
 <img src="https://user-images.githubusercontent.com/66175878/111066425-3a7fb500-84bf-11eb-8321-1b84eb63cfd8.png"> <br/>
