@@ -17,7 +17,7 @@ Why One Hot Encoding is necessary?
 > *Most of machine learning methods cannot directly use categorical data as inputs. The label encoding also can be used but machine might recognize it as 'number', then the machine can learn wrong pattern.*
 
 #### 1D CNN
-<img src="https://missinglink.ai/wp-content/uploads/2019/03/1D-convolutional-example_2x.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/66175878/112767635-35227e80-9018-11eb-8a98-4bdcda847191.png" width=30% height=30%> <br/>
 
 > **Convolution layer**
 > captures the pattern of given sequence
