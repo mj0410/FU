@@ -5,7 +5,7 @@
 ```
 [DeepBind](https://www.nature.com/articles/nbt.3300)
 
-### Comparison
+### Model Comparison
 ##### Loss-Epoch Curve
 
 ##### Precision-Recall Curve
