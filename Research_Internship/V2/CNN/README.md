@@ -2,4 +2,5 @@
 
 > GridSearch result
 ```
+Best: 0.756149 using {'epochs': 10, 'filters': 128, 'neurons': 128}
 ```
