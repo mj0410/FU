@@ -120,10 +120,12 @@ y_t = to_categorical(y_test.values.tolist())
 end = datetime.now()
 print("encoding running time : "+str(end-start))
 
-"""### CNN model"""
+# --------------------- #
+# ----- CNN model ----- #
+# --------------------- #
 
 from keras import callbacks
-earlystopping = callbacks.EarlyStopping(monitor ="val_loss", mode ="min", patience = 3, restore_best_weights = True)
+earlystopping = callbacks.EarlyStopping(monitor ="val_tp", mode ="max", patience = 3, restore_best_weights = True)
 
 print('CNN model training')
 
@@ -159,10 +161,9 @@ cnn_result_df = pd.DataFrame({ key:pd.Series(value) for key, value in cnn_result
 
 cnn_result_df.to_csv ('CNN_result.csv', index = False, header=True)
 
-"""### RNN model
-
-LSTM
-"""
+# ---------------------- #
+# ----- LSTM model ----- #
+# ---------------------- #
 
 lstm = Sequential()
 lstm.add(LSTM(16, return_sequences=True))
@@ -195,7 +196,10 @@ lstm_result_df = pd.DataFrame({ key:pd.Series(value) for key, value in lstm_resu
 
 lstm_result_df.to_csv ('LSTM_result.csv', index = False, header=True)
 
-"""BiLSTM"""
+
+# ------------------------------------ #
+# ----- Bidirectional LSTM model ----- #
+# ------------------------------------ #
 
 bilstm = Sequential()
 bilstm.add(Bidirectional(LSTM(16, return_sequences=True)))
@@ -228,10 +232,10 @@ bilstm_result_df = pd.DataFrame({ key:pd.Series(value) for key, value in bilstm_
 
 bilstm_result_df.to_csv ('BiLSTM_result.csv', index = False, header=True)
 
-"""### CNN-RNN model
 
-CNN-LSTM
-"""
+# -------------------------- #
+# ----- CNN-LSTM model ----- #
+# -------------------------- #
 
 cl = Sequential()
 cl.add(Conv1D(filters=64, kernel_size=7, strides=1, padding='valid', activation='relu'))
@@ -267,7 +271,10 @@ cl_result_df = pd.DataFrame({ key:pd.Series(value) for key, value in cl_result_d
 
 cl_result_df.to_csv ('CNN-LSTM_result.csv', index = False, header=True)
 
-"""CNN-BiLSTM"""
+
+# ---------------------------------------- #
+# ----- CNN-Bidirectional LSTM model ----- #
+# ---------------------------------------- #
 
 cbi = Sequential()
 cbi.add(Conv1D(filters=64, kernel_size=7, strides=1, padding='valid', activation='relu'))
