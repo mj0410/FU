@@ -7,44 +7,15 @@
 
 ### Model Comparison
 ##### Loss-Epoch Curve
+<img src="https://user-images.githubusercontent.com/66175878/118808154-73fee300-b8a9-11eb-88ab-a9c7acf328c8.png"> <br/>
 
 ##### Precision-Recall Curve
+<img src="https://user-images.githubusercontent.com/66175878/118808258-9ee93700-b8a9-11eb-8b42-aa6e9f6ffd9c.png" width=30% height=30%> <br/>
 
 ##### ROC Curve
-
+<img src="https://user-images.githubusercontent.com/66175878/118808378-c04a2300-b8a9-11eb-832c-85dd3ef1a72a.png" width=30% height=30%> <br/>
 
 ### GridSearchCV
 - 5-fold cross validation
 - scoring by average precision
-
-##### CNN Model
-
-> GridSearch result
-```
-Best: 0.748417 using {'activation': 'relu', 'filters': 256, 'neurons': 256}
-```
-
-##### LSTM Model
-> LSTM GridSearch result
-```
-Best: 0.744748 using {'activation': 'tanh', 'neurons': 32, 'units': 128}
-```
-
-> Bidirectional LSTM GridSearch result
-```
-Best: 0.755622 using {'activation': 'relu', 'neurons': 128, 'units': 200}
-```
-
-##### CNN-LSTM Model
-
-> CNN-LSTM GridSearch result
-```
-Best: 0.743196 using {'activation': 'tanh', 'filters': 64, 'neurons': 64, 'units': 64}
-```
-
-> CNN-BiLSTM GridSearch result
-```
-Best: 0.744849 using {'activation': 'relu', 'filters': 64, 'neurons': 64, 'units': 64}
-```
-
 
