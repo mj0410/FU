@@ -17,5 +17,5 @@
 
 ### GridSearchCV
 - 5-fold cross validation
-- scoring by average precision
+- scoring by roc auc
 
