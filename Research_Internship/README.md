@@ -1,9 +1,10 @@
 ### Neural Network
 
-- inspired by the neural architecture of a human brain <br/>
-- The output is provided by 'neurons' by applying functions (activation function) on the inputs. <br/>
+- inspired by the neural architecture of a human brain
+- The output is provided by 'neurons' by applying functions (activation function) on the inputs.
+
 ````diff
-Activation functions <br/>
+Activation functions
 # sigmoid
 - captures non-linearity in the data
 - problem of vanishing gradients. 
@@ -15,6 +16,9 @@ Activation functions <br/>
 - The most commonly used activation function
 - f(x)=max (0, x)
 ````
+##### Overfitting in ML
+- when the model learns the training data too well
+- **How to avoid?** make model less complex, add dropout layer, early stopping
 
 ### ANN / CNN / RNN 
 ##### ANN (Artificial Neural Network) 
