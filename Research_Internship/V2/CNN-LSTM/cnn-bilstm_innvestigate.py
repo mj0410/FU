@@ -293,7 +293,7 @@ methods = [
     ("smoothgrad", "SmoothGrad", {}),
     ("deconvnet", "Deconvnet", {}),
     ("guided_backprop", "Guided Backprop", {}),
-    ("deep_taylor.bounded", "DeepTaylor", {"low": -1, "high": 1}),
+    #("deep_taylor.bounded", "DeepTaylor", {"low": -1, "high": 1}),
     ("integrated_gradients", "Integrated Gradients", {}),
     ("lrp.z", "LRP-Z", {}),
     ("lrp.epsilon", "LRP-Epsilon", {}),
