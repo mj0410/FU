@@ -202,11 +202,11 @@ lstm_result_df.to_csv ('LSTM_result.csv', index = False, header=True)
 # ------------------------------------ #
 
 bilstm = Sequential()
-bilstm.add(Bidirectional(LSTM(16, return_sequences=True)))
+bilstm.add(Bidirectional(LSTM(32, return_sequences=True)))
 #bilstm.add(Bidirectional(LSTM(64, return_sequences=True)))
-bilstm.add(Bidirectional(LSTM(16)))
-bilstm.add(Dense(32, activation='relu'))
-bilstm.add(Dropout(0.2))
+bilstm.add(Bidirectional(LSTM(10)))
+#bilstm.add(Dense(32, activation='relu'))
+bilstm.add(Dropout(0.5))
 bilstm.add(Dense(2, activation='sigmoid'))
 bilstm.compile(optimizer='adam', loss="binary_crossentropy", metrics=[TruePositives(name='tp'), 'accuracy'])
 
@@ -241,9 +241,10 @@ cl = Sequential()
 cl.add(Conv1D(filters=64, kernel_size=7, strides=1, padding='valid', activation='relu'))
 cl.add(MaxPooling1D(pool_size=3, strides=1, padding='valid'))
 
-cl.add(LSTM(16, return_sequences=True))
+cl.add(LSTM(32, return_sequences=True))
+cl.add(LSTM(20, return_sequences=True))
 cl.add(LSTM(16))
-cl.add(Dense(10, activation='relu'))
+#cl.add(Dense(16, activation='relu'))
 cl.add(Dropout(0.5))
 cl.add(Dense(2, activation='sigmoid'))
 
