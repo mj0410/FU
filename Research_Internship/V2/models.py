@@ -166,11 +166,11 @@ cnn_result_df.to_csv ('CNN_result.csv', index = False, header=True)
 # ---------------------- #
 
 lstm = Sequential()
-lstm.add(LSTM(16, return_sequences=True))
+lstm.add(LSTM(64, return_sequences=True))
 #lstm.add(LSTM(64, return_sequences=True))
-lstm.add(LSTM(16))
-lstm.add(Dense(10, activation='relu'))
-lstm.add(Dropout(0.2))
+lstm.add(LSTM(20))
+#lstm.add(Dense(10, activation='relu'))
+lstm.add(Dropout(0.5))
 lstm.add(Dense(2, activation='sigmoid'))
 lstm.compile(optimizer='adam', loss="binary_crossentropy", metrics=[TruePositives(name='tp'), 'accuracy'])
 
@@ -283,7 +283,7 @@ cbi.add(MaxPooling1D(pool_size=3, strides=1, padding='valid'))
 
 cbi.add(Bidirectional(LSTM(16, return_sequences=True)))
 cbi.add(Bidirectional(LSTM(16)))
-cbi.add(Dense(16, activation='relu'))
+#cbi.add(Dense(16, activation='relu'))
 cbi.add(Dropout(0.5))
 cbi.add(Dense(2, activation='sigmoid'))
 
