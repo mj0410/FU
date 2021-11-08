@@ -1,0 +1,63 @@
+import glob
+
+# path/to/reference/file
+ref_path = "reference"
+# path/to/fastq/files
+fastq_path = "fastq"
+
+FASTQ = glob_wildcards(fastq_path+"/{fastq}_1.fastq")
+
+rule all:
+    input:
+        expand("new_stats/{sample}_idxstats_new.txt", sample=FASTQ[0])
+
+rule read_paired_end:
+    input:
+        ref = ref_path+"/reference.fa",
+        fastq1 = fastq_path+"/{sample}_1.fastq",
+        fastq2 = fastq_path+"/{sample}_2.fastq"
+    output:
+        "sam/{sample}.sam"
+    run:
+        shell("bowtie2-build {input.ref} ref")
+        shell("bowtie2 -x ref -1 {input.fastq1} -2 {input.fastq2} -S {output}")
+
+rule sam_to_bam:
+    input:
+        "sam/{sample}.sam"
+    output:
+        "bam/{sample}.bam"
+    shell:
+        "samtools view -S -b {input} > {output}"
+
+rule sort_bam:
+    input:
+        "bam/{sample}.bam"
+    output:
+        "bam_sorted/{sample}.bam"
+    shell:
+        "samtools sort -o {output} {input}"
+
+rule index_bam:
+    input:
+         "bam_sorted/{sample}.bam"
+    output:
+         "bam_sorted/{sample}.bam.bai"
+    shell:
+         "samtools index {input} {output}"
+
+rule samtools_idxstats:
+    input:
+        "bam_sorted/{sample}.bam"
+    output:
+        "stats/{sample}_idxstats.txt"
+    shell:
+        "samtools idxstats {input} > {output}"
+
+rule new_stats:
+    input:
+      a="stats/{sample}_idxstats.txt"
+    output:
+      b="new_stats/{sample}_idxstats_new.txt"
+    script:
+        "new_stats.py"

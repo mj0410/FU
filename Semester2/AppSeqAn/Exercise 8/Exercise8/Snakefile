@@ -1,0 +1,27 @@
+import os
+from pathlib import Path
+import pandas as pd
+import numpy as np
+
+configfile : "config.yaml" #set index(reference fasta file) and data(path to paired end reads)
+
+samples = pd.read_csv(config["samples"], index_col = "sample", sep='\t')
+path = []
+
+for i in range(len(samples)):
+    head, tail = os.path.split(samples['fq1'][0])
+    path.append(head + "/")
+
+samples['file_path'] = path
+
+include: "rules/bowtie.smk"
+include: "rules/samtools.smk"
+include: "rules/qc.smk"
+include: "rules/assembly.smk"
+include: "rules/tree.smk"
+include: "rules/sequence_variability.smk"
+include: "rules/kraken.smk"
+
+rule all:
+    input:
+        "reports/multiqc_report.html"
