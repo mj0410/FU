@@ -1,0 +1,404 @@
+
+The following have been reloaded with a version change:
+  1) GCCcore/10.2.0 => GCCcore/8.3.0
+  2) binutils/2.35-GCCcore-10.2.0 => binutils/2.32-GCCcore-8.3.0
+  3) zlib/1.2.11-GCCcore-10.2.0 => zlib/1.2.11-GCCcore-8.3.0
+
+
+The following have been reloaded with a version change:
+  1) CUDA/10.2.89-GCC-8.3.0 => CUDA/10.1.243-GCC-8.3.0
+
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: tensorflow-gpu in ./.local/lib/python3.8/site-packages (2.2.0)
+Requirement already satisfied: wheel>=0.26; python_version >= "3" in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from tensorflow-gpu) (0.35.1)
+Requirement already satisfied: wrapt>=1.11.1 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (1.12.1)
+Requirement already satisfied: scipy==1.4.1; python_version >= "3" in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (1.4.1)
+Requirement already satisfied: absl-py>=0.7.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (0.12.0)
+Requirement already satisfied: keras-preprocessing>=1.1.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (1.1.2)
+Requirement already satisfied: astunparse==1.6.3 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (1.6.3)
+Requirement already satisfied: termcolor>=1.1.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (1.1.0)
+Requirement already satisfied: opt-einsum>=2.3.2 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (3.3.0)
+Requirement already satisfied: google-pasta>=0.1.8 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (0.2.0)
+Requirement already satisfied: six>=1.12.0 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from tensorflow-gpu) (1.15.0)
+Requirement already satisfied: numpy<2.0,>=1.16.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (1.19.5)
+Requirement already satisfied: grpcio>=1.8.6 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (1.32.0)
+Requirement already satisfied: gast==0.3.3 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (0.3.3)
+Requirement already satisfied: tensorboard<2.3.0,>=2.2.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (2.2.2)
+Requirement already satisfied: protobuf>=3.8.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (3.15.8)
+Requirement already satisfied: h5py<2.11.0,>=2.10.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (2.10.0)
+Requirement already satisfied: tensorflow-estimator<2.3.0,>=2.2.0 in ./.local/lib/python3.8/site-packages (from tensorflow-gpu) (2.2.0)
+Requirement already satisfied: google-auth<2,>=1.6.3 in ./.local/lib/python3.8/site-packages (from tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (1.29.0)
+Requirement already satisfied: requests<3,>=2.21.0 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (2.24.0)
+Requirement already satisfied: tensorboard-plugin-wit>=1.6.0 in ./.local/lib/python3.8/site-packages (from tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (1.8.0)
+Requirement already satisfied: setuptools>=41.0.0 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (50.3.0)
+Requirement already satisfied: markdown>=2.6.8 in ./.local/lib/python3.8/site-packages (from tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (3.3.4)
+Requirement already satisfied: google-auth-oauthlib<0.5,>=0.4.1 in ./.local/lib/python3.8/site-packages (from tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (0.4.4)
+Requirement already satisfied: werkzeug>=0.11.15 in ./.local/lib/python3.8/site-packages (from tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (1.0.1)
+Requirement already satisfied: rsa<5,>=3.1.4; python_version >= "3.6" in ./.local/lib/python3.8/site-packages (from google-auth<2,>=1.6.3->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (4.7.2)
+Requirement already satisfied: cachetools<5.0,>=2.0.0 in ./.local/lib/python3.8/site-packages (from google-auth<2,>=1.6.3->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (4.2.1)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in ./.local/lib/python3.8/site-packages (from google-auth<2,>=1.6.3->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (0.2.8)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (1.25.10)
+Requirement already satisfied: certifi>=2017.4.17 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (2020.6.20)
+Requirement already satisfied: chardet<4,>=3.0.2 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (3.0.4)
+Requirement already satisfied: idna<3,>=2.5 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (2.10)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in ./.local/lib/python3.8/site-packages (from google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (1.3.0)
+Requirement already satisfied: pyasn1>=0.1.3 in /trinity/shared/easybuild/software/Python/3.8.6-GCCcore-10.2.0/lib/python3.8/site-packages (from rsa<5,>=3.1.4; python_version >= "3.6"->google-auth<2,>=1.6.3->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (0.4.8)
+Requirement already satisfied: oauthlib>=3.0.0 in ./.local/lib/python3.8/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<0.5,>=0.4.1->tensorboard<2.3.0,>=2.2.0->tensorflow-gpu) (3.1.0)
+2021-05-12 01:08:08.263848: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-05-12 01:08:08.292055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:5e:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2021-05-12 01:08:08.292841: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 1 with properties: 
+pciBusID: 0000:d8:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2021-05-12 01:08:08.298769: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-12 01:08:08.677882: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-12 01:08:09.024105: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-05-12 01:08:09.590440: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-05-12 01:08:09.906690: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-05-12 01:08:10.164789: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-05-12 01:08:10.854250: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-12 01:08:10.857327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0, 1
+2021-05-12 01:08:10.857741: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2021-05-12 01:08:10.864857: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2100000000 Hz
+2021-05-12 01:08:10.864967: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xa05bbf0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-12 01:08:10.864983: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-05-12 01:08:11.120786: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xa05e770 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-05-12 01:08:11.120820: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2021-05-12 01:08:11.120826: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): GeForce GTX 1080 Ti, Compute Capability 6.1
+2021-05-12 01:08:11.122802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:5e:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2021-05-12 01:08:11.123326: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 1 with properties: 
+pciBusID: 0000:d8:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.92GiB deviceMemoryBandwidth: 451.17GiB/s
+2021-05-12 01:08:11.123373: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-12 01:08:11.123388: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-12 01:08:11.123402: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-05-12 01:08:11.123414: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-05-12 01:08:11.123426: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-05-12 01:08:11.123438: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-05-12 01:08:11.123451: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-12 01:08:11.125283: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0, 1
+2021-05-12 01:08:11.125321: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-12 01:08:11.126978: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-12 01:08:11.126991: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 1 
+2021-05-12 01:08:11.126999: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N Y 
+2021-05-12 01:08:11.127004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 1:   Y N 
+2021-05-12 01:08:11.128556: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10378 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:5e:00.0, compute capability: 6.1)
+2021-05-12 01:08:11.129406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10378 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:d8:00.0, compute capability: 6.1)
+2021-05-12 01:08:25.497671: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-12 01:08:25.882718: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+WARNING:tensorflow:From /home/miniej94/.local/lib/python3.8/site-packages/tensorflow/python/keras/wrappers/scikit_learn.py:264: Sequential.predict_proba (from tensorflow.python.keras.engine.sequential) is deprecated and will be removed after 2021-01-01.
+Instructions for updating:
+Please use `model.predict()` instead.
+203209 203209
+encoding running time : 0:00:34.729414
+Fitting 5 folds for each of 54 candidates, totalling 270 fits
+[CV 1/5] END activation=relu, filters=20, neurons=20, units=20; total time= 2.6min
+[CV 2/5] END activation=relu, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 2/5] END activation=relu, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=32, units=32; total time= 2.2min
+[CV 2/5] END activation=relu, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=64, units=32; total time= 2.2min
+[CV 2/5] END activation=relu, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=64, units=32; total time= 2.2min
+[CV 4/5] END activation=relu, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 2/5] END activation=relu, filters=32, neurons=20, units=32; total time= 2.2min
+[CV 3/5] END activation=relu, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=20, units=32; total time= 2.2min
+[CV 5/5] END activation=relu, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=32, units=32; total time= 2.2min
+[CV 2/5] END activation=relu, filters=32, neurons=32, units=32; total time= 2.2min
+[CV 3/5] END activation=relu, filters=32, neurons=32, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=32, units=32; total time= 2.2min
+[CV 5/5] END activation=relu, filters=32, neurons=32, units=32; total time= 2.2min
+[CV 1/5] END activation=relu, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=64, units=32; total time= 2.2min
+[CV 2/5] END activation=relu, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 3/5] END activation=relu, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 5/5] END activation=relu, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=32, units=32; total time= 2.2min
+[CV 5/5] END activation=relu, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 1/5] END activation=relu, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 2/5] END activation=relu, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 3/5] END activation=relu, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 4/5] END activation=relu, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 5/5] END activation=relu, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=20, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=20, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=20, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=32, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=32, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=32, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=64, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=64, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=20, neurons=64, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=20, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=20, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=20, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=32, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=32, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=32, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=32, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=32, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=32, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=32, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=64, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=64, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=32, neurons=64, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=20, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=20, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=20, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=32, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=32, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=32, units=64; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=64, units=20; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=64, units=32; total time= 2.3min
+[CV 1/5] END activation=tanh, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 2/5] END activation=tanh, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 3/5] END activation=tanh, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 4/5] END activation=tanh, filters=64, neurons=64, units=64; total time= 2.3min
+[CV 5/5] END activation=tanh, filters=64, neurons=64, units=64; total time= 2.3min
+grid search running time : 10:16:53.048222
+Best: 0.744849 using {'activation': 'relu', 'filters': 64, 'neurons': 64, 'units': 64}
+Epoch 1/10
+16257/16257 - 142s - loss: 0.5873 - tp: 329172.0000 - accuracy: 0.6340 - val_loss: 0.5677 - val_tp: 83686.0000 - val_accuracy: 0.6459
+Epoch 2/10
+16257/16257 - 141s - loss: 0.5640 - tp: 338087.0000 - accuracy: 0.6506 - val_loss: 0.5590 - val_tp: 84734.0000 - val_accuracy: 0.6514
+Epoch 3/10
+16257/16257 - 140s - loss: 0.5564 - tp: 341648.0000 - accuracy: 0.6562 - val_loss: 0.5586 - val_tp: 85345.0000 - val_accuracy: 0.6584
+Epoch 4/10
+16257/16257 - 140s - loss: 0.5513 - tp: 344528.0000 - accuracy: 0.6623 - val_loss: 0.5530 - val_tp: 85768.0000 - val_accuracy: 0.6592
+Epoch 5/10
+16257/16257 - 139s - loss: 0.5465 - tp: 347567.0000 - accuracy: 0.6681 - val_loss: 0.5533 - val_tp: 86282.0000 - val_accuracy: 0.6633
+Epoch 6/10
+16257/16257 - 139s - loss: 0.5419 - tp: 349854.0000 - accuracy: 0.6726 - val_loss: 0.5517 - val_tp: 86272.0000 - val_accuracy: 0.6635
+Epoch 7/10
+16257/16257 - 139s - loss: 0.5365 - tp: 352853.0000 - accuracy: 0.6784 - val_loss: 0.5524 - val_tp: 86638.0000 - val_accuracy: 0.6662
+Epoch 8/10
+16257/16257 - 139s - loss: 0.5306 - tp: 355642.0000 - accuracy: 0.6836 - val_loss: 0.5560 - val_tp: 86526.0000 - val_accuracy: 0.6650
+Epoch 9/10
+16257/16257 - 139s - loss: 0.5242 - tp: 358903.0000 - accuracy: 0.6895 - val_loss: 0.5602 - val_tp: 86069.0000 - val_accuracy: 0.6613
+Epoch 10/10
+16257/16257 - 139s - loss: 0.5182 - tp: 362354.0000 - accuracy: 0.6965 - val_loss: 0.5625 - val_tp: 85960.0000 - val_accuracy: 0.6609
+
+== Epilog Slurmctld ==================================================
+
+Job ID: 7172436
+Cluster: curta
+User/Group: miniej94/agseelow
+State: COMPLETED (exit code 0)
+Cores: 1
+CPU Utilized: 10:40:47
+CPU Efficiency: 99.83% of 10:41:52 core-walltime
+Job Wall-clock time: 10:41:52
+Memory Utilized: 2.83 GB
+Memory Efficiency: 4.43% of 64.00 GB
+
+======================================================================

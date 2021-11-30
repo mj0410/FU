@@ -1,0 +1,62 @@
+
+metrics truepositive precision recall accurach
++ scoring = average precision
+
+*****CNN*****
+
+1)
+epochs = [10, 20]
+filters = [10, 20, 32, 50, 64, 100, 128]
+neurons = [10, 20, 32, 50, 64, 100, 128]
+
+Best: 0.756149 using {'epochs': 10, 'filters': 128, 'neurons': 128}
+
+2)
+epochs = [10]
+filters = [64, 128, 200, 256]
+neurons = [64, 128, 200, 256]
+activation = ['relu', 'tanh']
+
+Best: 0.756568 using {'epochs': 10, 'filters': 256, 'neurons': 128}
+
+*****LSTM*****
+
+1) 
+epochs = [10]
+units = [20, 32, 64, 128, 256]
+neurons = [20, 32, 64, 128, 256]
+activation = ['relu', 'tanh']
+
+
+*****BiLSTM*****
+
+1)
+epochs = [10, 20]
+units = [10, 20, 32, 64, 128]
+neurons = [10, 20, 32, 64, 128]
+activation = ['relu', 'tanh']
+
+
+*****CNN-LSTM*****
+
+1)
+filters = [10, 20, 32, 64]
+epochs = [10, 20]
+units = [10, 20, 32, 64]
+neurons = [10, 20, 32, 64]
+activation = ['relu', 'tanh']
+
+
+
+
+*****CNN-BiLSTM*****
+
+1)
+filters = [10, 20, 32, 64]
+epochs = [10, 20]
+units = [10, 20, 32, 64]
+neurons = [10, 20, 32, 64]
+activation = ['relu', 'tanh']
+
+
+
