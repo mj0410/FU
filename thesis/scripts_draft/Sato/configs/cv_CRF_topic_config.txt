@@ -1,0 +1,20 @@
+TYPENAME = type_synthea
+MAX_COL_COUNT = 25
+train_test_split = split_row50_1000fold_type_synthea
+header = valid_header_row50_type_synthea
+
+pre_trained_sherlock_path = synthea_row50_50exp_topic_50-fold_1000.pt
+
+topic = row50_16_cv
+feature = row50_16_cv_type_synthea_topic_row50_16_cv
+
+# saved model name
+comment = topic
+
+epoch = 50
+learning_rate = 0.01
+dropout_rate = 0.2
+table_batch_size = 100
+patience = 5
+
+num = 50

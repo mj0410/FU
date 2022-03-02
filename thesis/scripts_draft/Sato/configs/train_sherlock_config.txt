@@ -1,0 +1,13 @@
+TYPENAME = type_synthea
+
+train_test_split = split_row50_type_synthea
+header = valid_header_row50
+sherlock_feature = row50_type_synthea_sherlock
+topic_feature = row50_77_type_synthea_topic_row50_77
+model_name = synthea_row50_77
+topic = row50_77
+
+epoch = 50
+dropout_rate = 0.2
+batch_size = 512
+patience = 5

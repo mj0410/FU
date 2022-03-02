@@ -1,0 +1,17 @@
+TYPENAME = reduced_synthea
+
+train_test_split = test_split_5fold_reduced_synthea
+header = test_header
+sherlock_feature = test_reduced_synthea_sherlock
+model_name = test_sherlock
+
+topic_feature = test_reduced_synthea_topic_row50_15_test
+model_name = test_sherlock_topic
+topic = row50_15_test
+cross_validation = 5
+num = 5
+
+epoch = 2
+dropout_rate = 0.2
+batch_size = 512
+patience = 5

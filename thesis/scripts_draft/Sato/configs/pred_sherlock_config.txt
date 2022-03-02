@@ -1,0 +1,6 @@
+#input_file_path = $INPUT_DIR
+deeptable_result = test
+TYPENAME = $TYPENAME
+#topic = row50_15_test
+model = test_sherlock_5-fold_5
+#model = test_sherlock_topic_5-fold_5

@@ -1,0 +1,6 @@
+#input_file_path = $INPUT_DIR
+
+deeptable_result = synthea100p
+topic = t18_rr
+model = CRF_t18_rr_50-fold
+output = test

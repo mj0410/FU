@@ -1,0 +1,13 @@
+TYPENAME = 1K_new
+
+train_test_split = row50_1K_rcsvr_1000fold_1K_rcsvr
+header = header_row50_1K_rcsvr
+sherlock_feature = row50_1K_rcsvr_1K_rcsvr_sherlock
+model_name = 1K_rcsvr_sherlock
+cross_validation = 1000
+num = 2
+
+epoch = 2
+dropout_rate = 0.2
+batch_size = 512
+patience = 5

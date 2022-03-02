@@ -1,0 +1,19 @@
+TYPENAME = 1K_new
+MAX_COL_COUNT = 30
+train_test_split = row50_1K_rcsvr_1000fold_1K_rcsvr
+header = header_row50_1K_rcsvr
+
+feature = row50_1K_rcsvr_1K_rcsvr_sherlock
+pre_trained_sherlock_path = 1K_rcsvr_sherlock_50-fold_1000.pt
+
+# saved model name
+comment = crf_sherlock
+
+epoch = 2
+learning_rate = 0.01
+dropout_rate = 0.2
+table_batch_size = 100
+patience = 5
+
+num = 2
+

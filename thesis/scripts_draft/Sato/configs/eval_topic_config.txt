@@ -1,0 +1,26 @@
+TYPENAME = type_synthea
+MAX_COL_COUNT = 25
+train_test_split = split_row50_type_synthea
+header = valid_header_row50
+feature = row50_16_type_synthea_topic_row50_16
+topic = row50_16
+epoch = 50
+learning_rate = 0.01
+dropout_rate = 0.2
+table_batch_size = 512
+patience = 5
+pre_trained_sherlock_path = synthea_row50_16.pt
+
+# sherlock configs
+# topic', type=str_or_none, default=None)
+# pre_trained_sherlock_path = synthea_row50.pt
+# fixed_sherlock_params
+
+# exp configs
+#p.add('--multi_col_only', type=str2bool, default=False, help='filtering only the tables with multiple columns')
+#p.add('--init_matrix_path', type=str_or_none, default=None)
+#p.add('--training_acc', type=str2bool, default=True, help='Calculate training accuracy (in addition to loss) for debugging')
+#p.add('--shuffle_col', type=str2bool, default=False, help='Shuffle the columns in tables while training the model')
+#p.add('--mode', type=str, help='experiment mode', choices=['train', 'eval'], default='train')
+#p.add('--model_list',  nargs='+', type=str, help='For eval mode only, load pretrained models')
+#p.add('--cross_validation', type=str_or_none, default=None, help='Format CVn-k, load the kth exp for n-fold cross validation')
